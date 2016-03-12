@@ -1,0 +1,102 @@
+
+<div>
+
+
+ 				<md-list>	
+					  <md-list-item ng-repeat="item in items">
+					  	<md-checkbox ng-model="item.checked" ng-change="updateItem(item)"></md-checkbox>
+					    <p> {{ item.description }} </p>
+					    <md-button class="md-raised md-warn" ng-click="showConfirm($event,item)" >Delete</md-button>						  
+					  </md-list-item>  
+				</md-list>
+				
+				
+		
+		<form class="form-horizontal" role="form" >
+				 <md-input-container class="md-block">
+        		 <label>Description</label>
+        			<input md-maxlength="30" required="" name="description" ng-model="newItem">
+        			
+			        <div ng-messages="projectForm.description.$error">
+			          <div ng-message="required">This is required.</div>
+			          <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+			        </div>
+      			</md-input-container>
+      			
+      			 <md-button class="md-raised md-primary" ng-click="addItem(newItem)" ng-disabled="!newItem" >Save</md-button>
+      </form>			
+
+	  
+      <!--   <div class="alert alert-info" role="alert" ng-hide="items &amp;&amp; items.length > 0">
+        There are no items yet.
+      </div>
+		      <form class="form-horizontal" role="form" ng-submit="addItem(newItem)">
+		        <div class="form-group" ng-repeat="item in items">
+		          <div class="checkbox col-xs-9">
+		            <label>
+		              <input type="checkbox" ng-model="item.checked" ng-change="updateItem(item)"/> {{item.description}}
+		            </label>
+		          </div>
+		          <div class="col-xs-3">
+		            <button class="pull-right btn btn-danger" type="button" title="Delete"
+		              ng-click="deleteItem(item)">
+		              <span class="glyphicon glyphicon-trash"></span>
+		            </button>
+		          </div>
+		        </div>
+		        <hr />
+		        <div class="input-group">
+		          <input type="text" class="form-control" ng-model="newItem" placeholder="Enter the description..." />
+		          <span class="input-group-btn">
+		            <button class="btn btn-default" type="submit" ng-disabled="!newItem" title="Add">
+		              <span class="glyphicon glyphicon-plus"></span>
+		            </button>
+		          </span>
+		        </div>
+		      </form>
+        
+</div>    
+
+<!-- <div  ng-controller="AppController">     
+	  <md-content class="md-padding" layout="row" layout-wrap="" layout-align="center start" layout-xs="column">
+			    <div flex="50" flex-sm="100" flex-xs="100" layout="column">
+			      <md-card>
+			        <md-card-title>
+			          <md-card-title-text>
+			            <span class="md-headline">Stage Here</span>
+			            <span class="md-subhead">Logged in As  </span>
+			          </md-card-title-text>
+			          <md-card-title-media>
+			            <div class="md-media-lg card-media"></div>
+			          </md-card-title-media>
+			        </md-card-title>
+			      
+			      </md-card>
+			      <md-card>
+			        <md-card-title>
+			          <md-card-title-text>
+			            <span class="md-headline"></span>
+			            <span class="md-subhead"></span>
+			          </md-card-title-text>
+			        </md-card-title>
+			        <md-card-content layout="row" layout-align="space-between">
+			          <div class="md-media-xl card-media"></div>
+			          <md-card-actions layout="column">
+			            <md-button class="md-icon-button" aria-label="Favorite">
+			             
+			            </md-button>
+			            <md-button class="md-icon-button" aria-label="Settings">
+			              
+			            </md-button>
+			            <md-button class="md-icon-button" aria-label="Share">
+			             
+			            </md-button>
+			          </md-card-actions>
+			        </md-card-content>
+			      </md-card>
+			    </div>   
+	  </md-content>
+  </div>
+     -->
+     
+       

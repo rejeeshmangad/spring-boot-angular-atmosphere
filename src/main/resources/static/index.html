@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--  <link rel="stylesheet" href="./bower_components/bootstrap-css-only/css/bootstrap.min.css" />-->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.4/angular-material.css' />
+    <link rel='stylesheet' href='./app/css/custom.css' />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="./bower_components/lodash/dist/lodash.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.4/angular-material.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-aria.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-messages.js"></script>
+    
+    <script type="text/javascript"  src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="/webjars/atmosphere-javascript/2.2.3/atmosphere-min.js"></script>
+
+    <script type="text/javascript" src="./app/app.js"></script>
+    <script type="text/javascript" src="./app/controllers/MainController.js"></script>
+    <script type="text/javascript" src="./app/controllers/ItemController.js"></script>
+    <script type="text/javascript" src="./app/controllers/UserController.js"></script>
+    <script type="text/javascript" src="./app/controllers/ServerController.js"></script>
+    <script type="text/javascript" src="./app/controllers/MessageController.js"></script>
+    <script type="text/javascript" src="./app/services.js"></script>    
+  </head>  
+  
+    
+  <body ng-app="myApp">
+    <div ng-controller="MainController">      
+     	<div style="width:100%"  ng-cloak="">
+            <md-content>
+                <md-toolbar class='md-tall' style="background-color:purple">
+                  <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="Settings">
+                      <md-icon ng-show="isShowMenuItem" md-svg-icon="app/assets/ic_menu_white_24px.svg"></md-icon>
+                    </md-button>
+                     <span ng-show="isShowMenuItem">
+                         <h2 class="md-toolbar-tools">
+                            <a href="#/home" >Home</a>
+                         </h2>
+                      </span>
+                      <span ng-show="isShowMenuItem">
+                         <h2 class="md-toolbar-tools">
+                            <a href="#/item" >Item</a>
+                         </h2>
+                      </span>
+                      <span ng-show="isShowMenuItem">
+                         <h2 class="md-toolbar-tools">
+                             <a href="#/server" >Server Push</a>
+                         </h2>
+                      </span>
+                    <span flex=""></span>
+                    <md-button ng-show="isShowMenuItem" class="md-icon-button" aria-label="Favorite" >
+                        <md-icon md-svg-icon="app/assets/ic_exit_to_app_white_24px.svg" style="color: greenyellow;"></md-icon>
+                    </md-button>
+                  </div>
+                </md-toolbar>
+            </md-content>
+    </div>
+
+    <div id="content" ui-view="" flex=""> 
+    </div>
+
+    </div>
+  </body>
+
+</html>

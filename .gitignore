@@ -1,0 +1,9 @@
+.idea/
+ng-spring-boot.iml
+.project
+.classpath
+.settings/
+target/
+bower_components/
+
+

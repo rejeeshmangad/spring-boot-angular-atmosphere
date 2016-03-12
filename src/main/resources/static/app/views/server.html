@@ -1,0 +1,32 @@
+<div>
+    <h4>From server</h4>
+
+    <md-content class="md-padding" layout-xs="column" layout="row">
+
+        <div flex-xs flex-gt-xs="50" layout="column" ng-repeat="item in messages">
+            <md-card>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline"></span>
+                        <span class="md-subhead">{{ item.description }}</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-sm card-media"></div>
+                    </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button>{{ item.id}}</md-button>
+                    <md-button></md-button>
+                </md-card-actions>
+            </md-card>
+        </div>
+
+    </md-content>
+
+
+
+
+
+
+
+</div>
