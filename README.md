@@ -5,6 +5,10 @@
 #### AngularJS
 AngularJS is a MVC based framework for web applications, written in JavaScript. It makes it possible to use the Model-View-Controller pattern on the front-end. It also comes with several additional modules. In this example I'm also using **angular-resource**, which is a simple factory-pattern based module for creating REST clients.
 
+#### CSS
+
+Angular Material bootstrap css for styling and components.
+
 ### Back-end
 
 #### Spring Boot
