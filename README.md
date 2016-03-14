@@ -13,6 +13,9 @@ AngularJS is a MVC based framework for web applications, written in JavaScript. 
 Spring Data JPA allows you to create repositories for your data without even having to write a lot of code. The only code you need is a simple interface that extends from another interface and then you're done.
 With Spring Boot you can even leave the configuration behind for configuring Spring Data JPA, so now it's even easier.
 
+### Atmosphere
+Atmosphere a comet based Server push socket implementation.
+
 ## Installation
 Installation is quite easy, first you will have to install some front-end dependencies using Bower:
 ```
@@ -27,7 +30,7 @@ mvn clean package
 Now you can run the Java application quite easily:
 ```
 cd target
-java -jar ng-spring-boot-1.0.0.jar
+java -jar spring-boot-angular-atmosphere-1.0.0.jar
 ```
 
 ## DataBase (mysql)
@@ -42,5 +45,13 @@ CREATE TABLE `demospring`.`item` (
 ) ENGINE=InnoDB; 
 
 
+## DataBase (postgres)
+
+create database demospring;
+CREATE TABLE item (
+  id serial,
+  checked SMALLINT(1) DEFAULT NULL,
+  description character varying(200)
+);
 
 
